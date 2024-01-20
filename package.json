@@ -53,6 +53,6 @@
   },
   "devDependencies": {
     "@types/string-similarity": "^4.0.0",
-    "prisma": "^5.0.0"
+    "prisma": "^5.8.1"
   }
 }
