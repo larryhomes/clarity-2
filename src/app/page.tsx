@@ -18,10 +18,9 @@ export default async function Home() {
     <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
       <Card className="w-[300px]">
         <CardHeader>
-          <CardTitle>Welcome to Quizzzy 🔥!</CardTitle>
+          <CardTitle>Benvenuto a Clarity Quiz 🔥!</CardTitle>
           <CardDescription>
-            Quizzzy is a platform for creating quizzes using AI!. Get started by
-            loggin in below!
+          Clarity Quiz è una piattaforma per creare quiz utilizzando l'IA! Inizia accedendo qui sotto!
           </CardDescription>
         </CardHeader>
         <CardContent>

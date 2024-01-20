@@ -12,7 +12,7 @@ export async function POST(req: Request, res: Response) {
     const session = await getAuthSession();
     // if (!session?.user) {
     //   return NextResponse.json(
-    //     { error: "You must be logged in to create a game." },
+    //     { error: "Devi essere loggato per creare un gioco." },
     //     {
     //       status: 401,
     //     }
@@ -23,27 +23,27 @@ export async function POST(req: Request, res: Response) {
     let questions: any;
     if (type === "open_ended") {
       questions = await strict_output(
-        "You are a helpful AI that is able to generate a pair of question and answers, the length of each answer should not be more than 15 words, store all the pairs of answers and questions in a JSON array",
+        "Sei un AI di aiuto che è in grado di generare una coppia di domande e risposte, la lunghezza di ogni risposta non deve superare le 15 parole, memorizza tutte le coppie di risposte e domande in un array JSON",
         new Array(amount).fill(
-          `You are to generate a random hard open-ended questions about ${topic}`
+          `Devi generare una domanda aperta casuale e difficile su ${topic}`
         ),
         {
-          question: "question",
-          answer: "answer with max length of 15 words",
+          question: "domanda",
+          answer: "risposta con lunghezza massima di 15 parole",
         }
       );
     } else if (type === "mcq") {
       questions = await strict_output(
-        "You are a helpful AI that is able to generate mcq questions and answers, the length of each answer should not be more than 15 words, store all answers and questions and options in a JSON array",
+        "Sei un AI di aiuto che è in grado di generare domande e risposte a scelta multipla, la lunghezza di ogni risposta non deve superare le 15 parole, memorizza tutte le risposte, domande e opzioni in un array JSON",
         new Array(amount).fill(
-          `You are to generate a random hard mcq question about ${topic}`
+          `Devi generare una domanda a scelta multipla casuale e difficile su ${topic}`
         ),
         {
-          question: "question",
-          answer: "answer with max length of 15 words",
-          option1: "option1 with max length of 15 words",
-          option2: "option2 with max length of 15 words",
-          option3: "option3 with max length of 15 words",
+          question: "domanda",
+          answer: "risposta con lunghezza massima di 15 parole",
+          option1: "opzione1 con lunghezza massima di 15 parole",
+          option2: "opzione2 con lunghezza massima di 15 parole",
+          option3: "opzione3 con lunghezza massima di 15 parole",
         }
       );
     }
@@ -64,9 +64,9 @@ export async function POST(req: Request, res: Response) {
         }
       );
     } else {
-      console.error("elle gpt error", error);
+      console.error("errore elle gpt", error);
       return NextResponse.json(
-        { error: "An unexpected error occurred." },
+        { error: "Si è verificato un errore inaspettato." },
         {
           status: 500,
         }
