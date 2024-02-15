@@ -52,11 +52,11 @@ const Statistics = async ({ params: { gameId } }: Props) => {
     <>
       <div className="p-8 mx-auto max-w-7xl">
         <div className="flex items-center justify-between space-y-2">
-          <h2 className="text-3xl font-bold tracking-tight">Summary</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Riepilogo</h2>
           <div className="flex items-center space-x-2">
             <Link href="/dashboard" className={buttonVariants()}>
               <LucideLayoutDashboard className="mr-2" />
-              Back to Dashboard
+              Torna alla dashboard
             </Link>
           </div>
         </div>

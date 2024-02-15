@@ -18,12 +18,12 @@ type Props = {
 const QuestionsList = ({ questions }: Props) => {
   return (
     <Table className="mt-4">
-      <TableCaption>End of list.</TableCaption>
+      <TableCaption>Fine della lista</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead className="w-[10px]">No.</TableHead>
-          <TableHead>Question & Correct Answer</TableHead>
-          <TableHead>Your Answer</TableHead>
+          <TableHead>Domande e Risposte Corrette</TableHead>
+          <TableHead>Le tue risposte</TableHead>
 
           {questions[0].questionType === "open_ended" && (
             <TableHead className="w-[10px] text-right">Accuracy</TableHead>

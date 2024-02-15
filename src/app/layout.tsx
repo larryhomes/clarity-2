@@ -9,8 +9,8 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Quizmify",
-  description: "Quiz yourself on anything!",
+  title: "Clarity",
+  description: "Allenati con Clarity!",
 };
 
 export default function RootLayout({

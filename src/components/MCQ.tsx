@@ -83,8 +83,8 @@ const MCQ = ({ game }: Props) => {
             correct_answers: stats.correct_answers + 1,
           }));
           toast({
-            title: "Correct",
-            description: "You got it right!",
+            title: "Corretto",
+            description: "Hai studiato bene",
             variant: "success",
           });
         } else {
@@ -93,8 +93,8 @@ const MCQ = ({ game }: Props) => {
             wrong_answers: stats.wrong_answers + 1,
           }));
           toast({
-            title: "Incorrect",
-            description: "You got it wrong!",
+            title: "Risposta Sbagliata",
+            description: "RItenta!",
             variant: "destructive",
           });
         }
@@ -136,14 +136,15 @@ const MCQ = ({ game }: Props) => {
     return (
       <div className="absolute flex flex-col justify-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
         <div className="px-4 py-2 mt-2 font-semibold text-white bg-green-500 rounded-md whitespace-nowrap">
-          You Completed in{" "}
+        Hai completato il Quiz in
+{" "}
           {formatTimeDelta(differenceInSeconds(now, game.timeStarted))}
         </div>
         <Link
           href={`/statistics/${game.id}`}
           className={cn(buttonVariants({ size: "lg" }), "mt-2")}
-        >
-          View Statistics
+        >Guarda i risultati
+          
           <BarChart className="w-4 h-4 ml-2" />
         </Link>
       </div>

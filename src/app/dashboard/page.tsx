@@ -10,8 +10,8 @@ import React from "react";
 type Props = {};
 
 export const metadata = {
-  title: "Dashboard | Quizzzy",
-  description: "Quiz yourself on anything!",
+  title: "Dashboard | Clarity",
+  description: "Allenati con Clarity!",
 };
 
 const Dasboard = async (props: Props) => {
